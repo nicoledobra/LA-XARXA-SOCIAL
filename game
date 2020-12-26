@@ -1,0 +1,14 @@
+def menu():
+    print "new"
+    print "cat"
+    print "ls"
+    print "add"
+    print "se"
+    print "mv"
+    print "save"
+    print "load".
+    print "exit"
+    
+    pos = raw_input("Choose option: "
+    print ("Choose option:"),pos
+menu()
