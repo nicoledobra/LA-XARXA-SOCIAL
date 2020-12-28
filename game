@@ -1,14 +1,16 @@
 def menu():
-    print "new"
-    print "cat"
-    print "ls"
-    print "add"
-    print "se"
-    print "mv"
-    print "save"
-    print "load".
-    print "exit"
-    
-    pos = raw_input("Choose option: "
-    print ("Choose option:"),pos
-menu()
+	print "====================================="
+	print "Welcome to Social Network"
+	print "====================================="
+	print "new --> Create new user"
+	print "cat --> Show user information"
+	print "ls ---> List users"
+	print "add --> Add friends to an user"
+	print "se ---> Search user by pattern"
+	print "mv ---> Modify user information"
+	print "save ---> Save users to disk"
+	print "load ---> Load users from disk"
+	print "exit -> Logout"
+	print "====================================="
+	op = raw_input("Enter option: ")
+	return op
