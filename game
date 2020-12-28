@@ -12,5 +12,5 @@ def menu():
     print "load ---> Load users from disk"
     print "exit -> Logout"
     print "====================================="
-    op = raw_input("Enter option: ")
+    op = raw_input("Choose option: ")
     return op
