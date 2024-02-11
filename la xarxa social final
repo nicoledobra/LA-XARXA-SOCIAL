@@ -41,6 +41,14 @@ def display_user_info(user):
     print(f"Preference: {user.hobby}")
     print(f"Email: {user.email}")
     print(f"{len(user.friends)} Friends")
-    print(", ".join(friend.first_name + " " + friend.last_name for friend in user.friends))
+    if user.friends:
+        print("Friends:")
+        for friend in user.friends:
+            print(f"  - Dni: {friend.dni}")
+            print(f"    Name and surname: {friend.first_name} {friend.last_name}")
+            print(f"    Town: {friend.city}")
+            print(f"    Preference: {friend.hobby}")
+            print(f"    Email: {friend.email}")
     print()
+
 
