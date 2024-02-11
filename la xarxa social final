@@ -1,0 +1,46 @@
+def menu():
+    print("=====================================")
+    print("Welcome to Social Network")
+    print("=====================================")
+    print("new --> Create new user")
+    print("cat --> Show user information")
+    print("ls ---> List users")
+    print("add --> Add friends to an user")
+    print("se ---> Search user by pattern")
+    print("mv ---> Modify user information")
+    print("save ---> Save users to disk")
+    print("load ---> Load users from disk")
+    print("exit -> Logout")
+    print("=====================================")
+    op = input("Choose option: ")
+    return op
+
+class User:
+    def __init__(self, dni, first_name, last_name, network, city, hobby, email):
+        self.dni = dni
+        self.first_name = first_name
+        self.last_name = last_name
+        self.network = network
+        self.city = city
+        self.hobby = hobby
+        self.email = email
+        self.friends = set()
+
+def search_users(users, query):
+    return [user for user in users if query.lower() in user.first_name.lower() or query.lower() in user.last_name.lower()]
+
+def list_users(users):
+    return users
+
+def display_user_info(user):
+    print(f"**User:**")
+    print(f"Dni: {user.dni}")
+    print(f"Name and surname: {user.first_name} {user.last_name}")
+    print(f"Network: {user.network}")
+    print(f"Town: {user.city}")
+    print(f"Preference: {user.hobby}")
+    print(f"Email: {user.email}")
+    print(f"{len(user.friends)} Friends")
+    print(", ".join(friend.first_name + " " + friend.last_name for friend in user.friends))
+    print()
+
