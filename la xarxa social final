@@ -50,5 +50,17 @@ def display_user_info(user):
             print(f"    Preference: {friend.hobby}")
             print(f"    Email: {friend.email}")
     print()
+def saveFile(contact_dict):
+    # Obrir el fitxer en mode d'escriptura
+    with open('data.txt', 'w') as file:
+        # Recorre el diccionari de contactes
+        for dni, info in contact_dict.items():
+            # Convertir la llista d'amics a una cadena formatada
+            friend_list = ' '.join(info['friend_list'])
+            
+            # Escriure les dades al fitxer en el format especificat
+            file.write(f"{dni} {info['name']} {info['surname']} {info['city']} {info['hobby']} "
+                       f"{info['email']} {info['password']} [{friend_list}]\n")
+
 
 
