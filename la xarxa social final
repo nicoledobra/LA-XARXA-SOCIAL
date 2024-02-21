@@ -94,5 +94,24 @@ def readFile():
             }
 
     return contact_dict
+def searchPattern(contact_dictionary, search_pattern):
+    results = []
+
+    for user, data in contact_dictionary.items():
+        for field, value in data.items():
+            if isinstance(value, str) and search_pattern.lower() in value.lower():
+                results.append((user, data))
+                break  
+    if results:
+        for user, data in results:
+            print(f"User: {user}")
+            for field, value in data.items():
+                print(f"{field}: {value}")
+            print("-" * 20)
+        print(f"Total users matching the pattern: {len(results)}")
+    else:
+        print("No user matches the specified pattern.")
+
+
 
 
