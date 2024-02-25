@@ -112,6 +112,41 @@ def searchPattern(contact_dictionary, search_pattern):
     else:
         print("No user matches the specified pattern.")
 
+while True:
+    print("\nWelcome to Social Network")
+    print("1. New User")
+    print("2. User Information")
+    print("3. Users")
+    print("4. Add Friends to an User")
+    print("5. Search User")
+    print("6. Modify User")
+    print("7. Save Users")
+    print("8. Load Users")
+    print("9. Logout")
+
+    option = input("Option: ")
+
+    if option == '1':
+        createNewUser()
+    elif option == '2':
+        displayUserInformation()
+    elif option == '3':
+        displayUsers()
+    elif option == '4':
+        addFriends()
+    elif option == '5':
+        searchUser()
+    elif option == '6':
+        modifyUser()
+    elif option == '7':
+        saveUsers()
+    elif option == '8':
+        loadUsers()
+    elif option == '9':
+        print("Logging out. Goodbye!")
+        break
+    else:
+        print("Invalid option. Please try again.")
 
 
 
